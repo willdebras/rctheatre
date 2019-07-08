@@ -17,7 +17,7 @@
 #' @param draw.plot
 #' @param ...
 #'
-#' @return
+#' @return returns a risk characterization theatre plot
 #' @export
 #'
 #' @examples
