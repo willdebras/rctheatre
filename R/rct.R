@@ -1,21 +1,21 @@
 
 #' rct function
 #'
-#' @param cases
-#' @param type
-#' @param border
-#' @param xlim
-#' @param ylim
-#' @param fill
-#' @param xlab
+#' @param cases single number or vector giving the number of seats to shade. If a vector is supplied, the values indicate how many seats of each colour to shade. The sum of this vector gives the total number of seats shaded
+#' @param type the floor plan to be used. Current options are "square", "theatre" (the original Rifkin and Bouwer floor plan), "stadium" and "bigsquare"
+#' @param border the color for the outlines of the floor plan
+#' @param xlim range of x axis. Note that the theate sits in the unit square with bottom corner (0, 0) and top corner (1, 1)
+#' @param ylim range of y axis
+#' @param fill vector of colours for shading seats, defaults to grey
+#' @param xlab text label to appear below floor plan. Defaults to "x cases in n"
 #' @param ylab
-#' @param lab.cex
-#' @param seed
-#' @param plot.new
-#' @param label
-#' @param lab.col
-#' @param draw.plot
-#' @param ...
+#' @param lab.cex character expansion factor (see 'par') to specify size of text labels (if any) on the floor plan
+#' @param seed specify the starting seed value for the random number generator. Setting this makes it possible to reproduce exactly the same shaded seats on successive calls of rct
+#' @param plot.new if FALSE, the theatre is drawn over the top of an existing plot
+#' @param label if TRUE, any text labels for the specified floor plan will be displayed
+#' @param lab.col colour used for any text labels
+#' @param draw.plot if this is FALSE, the RCT is not drawn and instead a data frame is returned showing the seats that would have been shaded and the colours that would have been used
+#' @param ... any additional parameters are passed through to the plot call that sets up the chart
 #'
 #' @return returns a risk characterization theatre plot
 #' @export

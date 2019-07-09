@@ -10,7 +10,33 @@ rct(cases, type = "square", border = "#1239DC", xlim = c(0, 1),
   lab.col = "#1239DC", draw.plot = TRUE, ...)
 }
 \arguments{
-\item{...}{}
+\item{cases}{single number or vector giving the number of seats to shade. If a vector is supplied, the values indicate how many seats of each colour to shade. The sum of this vector gives the total number of seats shaded}
+
+\item{type}{the floor plan to be used. Current options are "square", "theatre" (the original Rifkin and Bouwer floor plan), "stadium" and "bigsquare"}
+
+\item{border}{the color for the outlines of the floor plan}
+
+\item{xlim}{range of x axis. Note that the theate sits in the unit square with bottom corner (0, 0) and top corner (1, 1)}
+
+\item{ylim}{range of y axis}
+
+\item{fill}{vector of colours for shading seats, defaults to grey}
+
+\item{xlab}{text label to appear below floor plan. Defaults to "x cases in n"}
+
+\item{lab.cex}{character expansion factor (see 'par') to specify size of text labels (if any) on the floor plan}
+
+\item{seed}{specify the starting seed value for the random number generator. Setting this makes it possible to reproduce exactly the same shaded seats on successive calls of rct}
+
+\item{plot.new}{if FALSE, the theatre is drawn over the top of an existing plot}
+
+\item{label}{if TRUE, any text labels for the specified floor plan will be displayed}
+
+\item{lab.col}{colour used for any text labels}
+
+\item{draw.plot}{if this is FALSE, the RCT is not drawn and instead a data frame is returned showing the seats that would have been shaded and the colours that would have been used}
+
+\item{...}{any additional parameters are passed through to the plot call that sets up the chart}
 }
 \value{
 returns a risk characterization theatre plot
